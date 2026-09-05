@@ -1,0 +1,478 @@
+{% extends "base.html" %}
+{% load static portfolio_extras %}
+
+{% block title %}{{ profile.full_name }} — {{ profile.tagline }}{% endblock %}
+
+{% block content %}
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-7">
+        {% if profile.available_for_work %}
+        <div class="status-pill"><span class="status-dot"></span>Open to opportunities</div>
+        {% endif %}
+
+        <h1 class="hero-name">
+          Hi, I'm <span class="text-gradient">{{ profile.full_name|default:"Developer" }}</span>
+        </h1>
+
+        <div class="hero-typed mb-3">
+          I build
+          <span id="typed-text" class="typed-text"
+                data-roles='{{ profile.roles_list|to_json }}'></span><span class="cursor"></span>
+        </div>
+
+        <p class="hero-bio mb-4">
+          {{ profile.about_paragraphs.0|default:"Software engineer focused on machine learning and full-stack web development." }}
+        </p>
+
+        <div class="d-flex flex-wrap gap-3 mb-4">
+          <a href="#projects" class="btn btn-glow"><i class="bi bi-collection me-2"></i>View my work</a>
+          <a href="{% url 'core:resume' %}" class="btn btn-ghost"><i class="bi bi-file-earmark-arrow-down me-2"></i>Download resume</a>
+        </div>
+
+        <div class="d-flex gap-2">
+          {% if profile.github_url %}<a class="social-btn" href="{{ profile.github_url }}" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>{% endif %}
+          {% if profile.linkedin_url %}<a class="social-btn" href="{{ profile.linkedin_url }}" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>{% endif %}
+          {% if profile.email %}<a class="social-btn" href="mailto:{{ profile.email }}" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>{% endif %}
+          {% for cp in coding_profiles %}<a class="social-btn" href="{{ cp.url }}" target="_blank" rel="noopener" aria-label="{{ cp.platform }}"><i class="bi {{ cp.icon }}"></i></a>{% endfor %}
+        </div>
+      </div>
+
+      <div class="col-lg-5 hero-visual">
+        <div class="avatar-ring mb-4">
+          {% if profile.photo %}
+            <img src="{{ profile.photo.url }}" alt="{{ profile.full_name }}">
+          {% else %}
+            <div class="avatar-fallback">{{ profile.full_name|initials }}</div>
+          {% endif %}
+        </div>
+
+        <div class="code-card">
+          <div class="code-dots">
+            <span style="background:#ff5f57"></span><span style="background:#febc2e"></span><span style="background:#28c840"></span>
+          </div>
+          <div><span class="cm"># whoami.py</span></div>
+          <div><span class="kw">class</span> <span class="fn">Engineer</span>:</div>
+          <div>&nbsp;&nbsp;name = <span class="str">"{{ profile.full_name|default:'Developer' }}"</span></div>
+          <div>&nbsp;&nbsp;focus = [<span class="str">"ML"</span>, <span class="str">"DL"</span>, <span class="str">"NLP"</span>, <span class="str">"Web"</span>]</div>
+          <div>&nbsp;&nbsp;stack = <span class="str">"Python · Django · PyTorch"</span></div>
+          <div>&nbsp;&nbsp;<span class="kw">def</span> <span class="fn">ship</span>(self): <span class="kw">return</span> <span class="str">"🚀"</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="#about" class="scroll-cue d-none d-lg-block" aria-label="Scroll down"><i class="bi bi-chevron-double-down"></i></a>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="section-sm">
+  <div class="container">
+    <div class="row g-3">
+      <div class="col-6 col-lg-3 reveal">
+        <div class="glass stat-card">
+          <div class="stat-value text-gradient" data-count="{{ project_count }}" data-suffix="+">0</div>
+          <div class="stat-label">Projects built</div>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3 reveal" data-delay="80">
+        <div class="glass stat-card">
+          <div class="stat-value text-gradient" data-count="97.56" data-suffix="%">0</div>
+          <div class="stat-label">Best model accuracy</div>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3 reveal" data-delay="160">
+        <div class="glass stat-card">
+          <div class="stat-value text-gradient" data-count="4928" data-suffix="">0</div>
+          <div class="stat-label">Model evaluations run</div>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3 reveal" data-delay="240">
+        <div class="glass stat-card">
+          <div class="stat-value text-gradient" data-count="89.7" data-suffix="%">0</div>
+          <div class="stat-label">B.Tech aggregate</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="row g-5 align-items-start">
+      <div class="col-lg-7 reveal">
+        <div class="section-label"><i class="bi bi-person"></i>About me</div>
+        <h2 class="section-title">Turning data and code into things that <span class="text-gradient">actually ship</span></h2>
+        {% for para in profile.about_paragraphs %}
+          <p class="text-muted-soft">{{ para }}</p>
+        {% empty %}
+          <p class="text-muted-soft">Add your bio in the Django admin under Profile.</p>
+        {% endfor %}
+
+        <div class="d-flex flex-wrap gap-2 mt-4">
+          {% for lang in languages %}
+            <span class="chip chip-accent"><i class="bi bi-translate me-1"></i>{{ lang.name }} — {{ lang.level }}</span>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="col-lg-5 reveal" data-delay="120">
+        <div class="glass p-4">
+          <h3 class="h6 text-uppercase text-dim mb-3" style="letter-spacing:.14em;">Quick facts</h3>
+          {% if profile.location %}<div class="contact-line"><i class="bi bi-geo-alt"></i><span>{{ profile.location }}</span></div>{% endif %}
+          {% if profile.email %}<div class="contact-line"><i class="bi bi-envelope"></i><a href="mailto:{{ profile.email }}">{{ profile.email }}</a></div>{% endif %}
+          {% if profile.phone %}<div class="contact-line"><i class="bi bi-telephone"></i><span>{{ profile.phone }}</span></div>{% endif %}
+          {% with education.0 as latest %}
+            {% if latest %}<div class="contact-line"><i class="bi bi-mortarboard"></i><span>{{ latest.degree }} — {{ latest.institution|truncatechars:38 }}</span></div>{% endif %}
+          {% endwith %}
+          {% if profile.linkedin_url %}<div class="contact-line"><i class="bi bi-linkedin"></i><a href="{{ profile.linkedin_url }}" target="_blank" rel="noopener">LinkedIn profile</a></div>{% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section class="section" id="skills">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <div class="section-label"><i class="bi bi-cpu"></i>Skills</div>
+      <h2 class="section-title">The toolkit</h2>
+      <p class="section-sub mx-auto">Everything below is something I've shipped with, not just read about.</p>
+    </div>
+
+    <div class="row g-4">
+      {% for cat in skill_categories %}
+      <div class="col-md-6 col-lg-4 reveal" data-delay="{{ forloop.counter0|add:forloop.counter0 }}0">
+        <div class="glass skill-card">
+          <div class="skill-icon"><i class="bi {{ cat.icon }}"></i></div>
+          <h3 class="h5 mb-1">{{ cat.name }}</h3>
+          {% if cat.description %}<p class="text-dim small mb-3">{{ cat.description }}</p>{% endif %}
+          <div class="mt-2">
+            {% for skill in cat.skills.all %}
+              {% if skill.is_featured %}
+                <div class="mb-2">
+                  <div class="d-flex justify-content-between small">
+                    <span>{{ skill.name }}</span><span class="text-dim">{{ skill.proficiency }}%</span>
+                  </div>
+                  <div class="skill-bar"><span data-value="{{ skill.proficiency }}"></span></div>
+                </div>
+              {% else %}
+                <span class="chip">{{ skill.name }}</span>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      {% empty %}
+      <div class="col-12"><p class="text-dim">No skills yet — add them in the admin.</p></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section class="section" id="experience">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <div class="section-label"><i class="bi bi-briefcase"></i>Experience</div>
+      <h2 class="section-title">Where I've worked</h2>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <div class="timeline">
+          {% for exp in experiences %}
+          <div class="timeline-item reveal">
+            <div class="timeline-period mb-2">{{ exp.period }}</div>
+            <div class="glass timeline-card">
+              <h3 class="h5 mb-1">{{ exp.role }}</h3>
+              <div class="text-muted-soft mb-2">
+                <i class="bi bi-building me-1"></i>{{ exp.organisation }}{% if exp.location %} · {{ exp.location }}{% endif %}
+              </div>
+              {% if exp.summary %}<p class="text-muted-soft small">{{ exp.summary }}</p>{% endif %}
+              <ul class="text-muted-soft small ps-3 mb-3">
+                {% for bullet in exp.bullets.all %}<li class="mb-1">{{ bullet.text }}</li>{% endfor %}
+              </ul>
+              <div>{% for tech in exp.tech_list %}<span class="chip">{{ tech }}</span>{% endfor %}</div>
+            </div>
+          </div>
+          {% empty %}
+          <p class="text-dim">No experience entries yet.</p>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section class="section" id="projects">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <div class="section-label"><i class="bi bi-collection"></i>Projects</div>
+      <h2 class="section-title">Things I've built</h2>
+      <p class="section-sub mx-auto">From transformer research to blockchain payments — click any card for the full story.</p>
+    </div>
+
+    <div class="row g-4">
+      {% for project in projects %}
+      <div class="col-md-6 col-lg-4 reveal" data-delay="{{ forloop.counter0|add:forloop.counter0 }}0">
+        <article class="glass project-card">
+          <div class="project-media">
+            {% if project.image %}
+              <img src="{{ project.image.url }}" alt="{{ project.title }}">
+            {% else %}
+              <i class="bi bi-braces-asterisk"></i>
+            {% endif %}
+            {% if project.badge %}<span class="project-badge">{{ project.badge }}</span>{% endif %}
+          </div>
+          <div class="project-body">
+            <div class="small text-dim mb-1">{{ project.get_category_display }}</div>
+            <h3 class="project-title"><a href="{{ project.get_absolute_url }}">{{ project.title }}</a></h3>
+            <p class="project-desc">{{ project.short_description|truncatewords:26 }}</p>
+            <div class="my-3">
+              {% for tech in project.tech_list|slice:":4" %}<span class="chip">{{ tech }}</span>{% endfor %}
+              {% if project.tech_list|length > 4 %}<span class="chip">+{{ project.tech_list|length|add:"-4" }}</span>{% endif %}
+            </div>
+            <div class="d-flex gap-3 small">
+              <a href="{{ project.get_absolute_url }}">Details <i class="bi bi-arrow-right"></i></a>
+              {% if project.github_url %}<a href="{{ project.github_url }}" target="_blank" rel="noopener"><i class="bi bi-github"></i> Code</a>{% endif %}
+              {% if project.live_url %}<a href="{{ project.live_url }}" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right"></i> Live</a>{% endif %}
+            </div>
+          </div>
+        </article>
+      </div>
+      {% empty %}
+      <div class="col-12"><p class="text-dim">No projects yet — add them in the admin.</p></div>
+      {% endfor %}
+    </div>
+
+    <div class="text-center mt-5 reveal">
+      <a href="{% url 'core:project_list' %}" class="btn btn-ghost">Browse all projects <i class="bi bi-arrow-right ms-1"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EDUCATION ============ -->
+<section class="section" id="education">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <div class="section-label"><i class="bi bi-mortarboard"></i>Education</div>
+      <h2 class="section-title">Academic background</h2>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <div class="timeline">
+          {% for edu in education %}
+          <div class="timeline-item reveal">
+            <div class="timeline-period mb-2">{{ edu.period }}</div>
+            <div class="glass timeline-card">
+              <div class="d-flex flex-wrap justify-content-between align-items-start gap-2">
+                <div>
+                  <h3 class="h5 mb-1">{{ edu.degree }}{% if edu.field_of_study %} · {{ edu.field_of_study }}{% endif %}</h3>
+                  <div class="text-muted-soft small"><i class="bi bi-building me-1"></i>{{ edu.institution }}</div>
+                </div>
+                {% if edu.score %}<span class="chip chip-accent">{{ edu.score }}</span>{% endif %}
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ACHIEVEMENTS ============ -->
+<section class="section" id="achievements">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <div class="section-label"><i class="bi bi-trophy"></i>Achievements</div>
+      <h2 class="section-title">Awards &amp; certifications</h2>
+    </div>
+
+    <div class="row g-4">
+      {% for item in awards %}
+      <div class="col-md-6 reveal">
+        <div class="glass p-4 h-100">
+          <div class="d-flex gap-3">
+            <div class="skill-icon flex-shrink-0 mb-0"><i class="bi {{ item.icon }}"></i></div>
+            <div>
+              <h3 class="h6 mb-1">{{ item.title }}</h3>
+              <div class="small text-dim mb-2">{{ item.issuer }}{% if item.period %} · {{ item.period }}{% endif %}</div>
+              <ul class="small text-muted-soft ps-3 mb-0">
+                {% for point in item.point_list %}<li>{{ point }}</li>{% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    {% if certifications %}
+    <div class="row g-3 mt-3">
+      {% for cert in certifications %}
+      <div class="col-md-6 reveal">
+        <div class="glass p-3 d-flex align-items-center gap-3">
+          <i class="bi bi-patch-check-fill" style="color: var(--accent-3); font-size:1.4rem;"></i>
+          <div>
+            <div class="small fw-semibold">{{ cert.title }}</div>
+            <div class="small text-dim">{{ cert.issuer }}{% if cert.period %} · {{ cert.period }}{% endif %}</div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+<!-- ============ CODING PROFILES ============ -->
+{% if coding_profiles %}
+<section class="section" id="coding">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <div class="section-label"><i class="bi bi-terminal"></i>Practice</div>
+      <h2 class="section-title">Where I grind problems</h2>
+    </div>
+
+    <div class="row g-4 mb-4">
+      {% for cp in coding_profiles %}
+      <div class="col-md-6 col-lg-4 reveal" data-delay="{{ forloop.counter0 }}00">
+        <a href="{{ cp.url }}" target="_blank" rel="noopener" class="glass platform-card text-decoration-none">
+          <div class="platform-icon"><i class="bi {{ cp.icon }}"></i></div>
+          <div>
+            <div class="fw-semibold text-white">{{ cp.platform }}</div>
+            <div class="small text-dim">@{{ cp.username }}</div>
+            {% if cp.stat_value %}<div class="small text-muted-soft mt-1">{{ cp.stat_value }} {{ cp.stat_label }}</div>{% endif %}
+          </div>
+          <i class="bi bi-arrow-up-right ms-auto text-dim"></i>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+
+    {% if profile.github_username %}
+    <div class="row g-4">
+      <!-- These cards hide themselves if the GitHub username is wrong or the service is down. -->
+      <div class="col-lg-6 reveal">
+        <div class="glass p-3 text-center">
+          <img class="img-fluid rounded"
+               src="https://github-readme-stats.vercel.app/api?username={{ profile.github_username }}&show_icons=true&hide_border=true&bg_color=00000000&title_color=5b8cff&icon_color=24d3a5&text_color=93a1bd"
+               alt="GitHub stats for {{ profile.github_username }}" loading="lazy"
+               onerror="this.closest('.col-lg-6').hidden = true;">
+        </div>
+      </div>
+      <div class="col-lg-6 reveal" data-delay="100">
+        <div class="glass p-3 text-center">
+          <img class="img-fluid rounded"
+               src="https://github-readme-streak-stats.herokuapp.com/?user={{ profile.github_username }}&hide_border=true&background=00000000&ring=5b8cff&fire=a06bff&currStreakLabel=24d3a5&sideLabels=93a1bd&dates=6b7a99&sideNums=e8edf7&currStreakNum=e8edf7"
+               alt="GitHub streak for {{ profile.github_username }}" loading="lazy"
+               onerror="this.closest('.col-lg-6').hidden = true;">
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% endif %}
+
+<!-- ============ BLOG TEASER ============ -->
+{% if recent_posts %}
+<section class="section" id="writing">
+  <div class="container">
+    <div class="d-flex flex-wrap justify-content-between align-items-end mb-5 gap-3 reveal">
+      <div>
+        <div class="section-label"><i class="bi bi-pencil"></i>Writing</div>
+        <h2 class="section-title mb-0">From the blog</h2>
+      </div>
+      <a href="{% url 'blog:post_list' %}" class="btn btn-ghost btn-sm">All posts <i class="bi bi-arrow-right ms-1"></i></a>
+    </div>
+
+    <div class="row g-4">
+      {% for post in recent_posts %}
+      <div class="col-md-4 reveal" data-delay="{{ forloop.counter0 }}00">
+        <article class="glass post-card p-4">
+          <div class="post-meta mb-2">
+            {% if post.category %}<span class="chip chip-accent">{{ post.category.name }}</span>{% endif %}
+            <span class="ms-1">{{ post.published_at|date:"M j, Y" }} · {{ post.reading_minutes }} min read</span>
+          </div>
+          <h3 class="h5 mb-2"><a href="{{ post.get_absolute_url }}" class="text-white">{{ post.title }}</a></h3>
+          <p class="text-muted-soft small mb-0">{{ post.excerpt|truncatewords:22 }}</p>
+        </article>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- ============ CONTACT ============ -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <div class="section-label"><i class="bi bi-chat-dots"></i>Contact</div>
+      <h2 class="section-title">Let's build something</h2>
+      <p class="section-sub mx-auto">Hiring, collaborating, or just want to talk about transformers — my inbox is open.</p>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+      <div class="col-lg-5 reveal">
+        <div class="glass p-4 h-100">
+          <h3 class="h6 text-uppercase text-dim mb-3" style="letter-spacing:.14em;">Reach me directly</h3>
+          {% if profile.email %}<div class="contact-line"><i class="bi bi-envelope"></i><a href="mailto:{{ profile.email }}">{{ profile.email }}</a></div>{% endif %}
+          {% if profile.phone %}<div class="contact-line"><i class="bi bi-telephone"></i><a href="tel:{{ profile.phone|cut:' ' }}">{{ profile.phone }}</a></div>{% endif %}
+          {% if profile.location %}<div class="contact-line"><i class="bi bi-geo-alt"></i><span>{{ profile.location }}</span></div>{% endif %}
+          {% if profile.linkedin_url %}<div class="contact-line"><i class="bi bi-linkedin"></i><a href="{{ profile.linkedin_url }}" target="_blank" rel="noopener">Connect on LinkedIn</a></div>{% endif %}
+
+          <div class="d-flex gap-2 mt-4">
+            {% if profile.github_url %}<a class="social-btn" href="{{ profile.github_url }}" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>{% endif %}
+            {% for cp in coding_profiles %}<a class="social-btn" href="{{ cp.url }}" target="_blank" rel="noopener"><i class="bi {{ cp.icon }}"></i></a>{% endfor %}
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-7 reveal" data-delay="120">
+        <div class="glass p-4">
+          <form method="post" action="{% url 'core:contact' %}" novalidate>
+            {% csrf_token %}
+            {{ form.website }}
+            {% if form.non_field_errors %}<div class="alert alert-danger py-2">{{ form.non_field_errors }}</div>{% endif %}
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label" for="{{ form.name.id_for_label }}">Name</label>
+                {{ form.name }}
+                {% for error in form.name.errors %}<div class="invalid-feedback d-block">{{ error }}</div>{% endfor %}
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="{{ form.email.id_for_label }}">Email</label>
+                {{ form.email }}
+                {% for error in form.email.errors %}<div class="invalid-feedback d-block">{{ error }}</div>{% endfor %}
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="{{ form.subject.id_for_label }}">Subject</label>
+                {{ form.subject }}
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="{{ form.message.id_for_label }}">Message</label>
+                {{ form.message }}
+                {% for error in form.message.errors %}<div class="invalid-feedback d-block">{{ error }}</div>{% endfor %}
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-glow w-100"><i class="bi bi-send me-2"></i>Send message</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

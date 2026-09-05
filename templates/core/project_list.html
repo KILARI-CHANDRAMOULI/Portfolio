@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}Projects — {{ site_profile.full_name }}{% endblock %}
+
+{% block nav_links %}
+<li class="nav-item"><a class="nav-link" href="{% url 'core:home' %}">Home</a></li>
+<li class="nav-item"><a class="nav-link active" href="{% url 'core:project_list' %}">Projects</a></li>
+<li class="nav-item"><a class="nav-link" href="{% url 'blog:post_list' %}">Blog</a></li>
+<li class="nav-item"><a class="nav-link" href="{% url 'core:home' %}#contact">Contact</a></li>
+{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+  <div class="container">
+    <div class="section-label"><i class="bi bi-collection"></i>Portfolio</div>
+    <h1 class="section-title">All projects</h1>
+    <p class="section-sub">{{ projects|length }} project{{ projects|length|pluralize }} across machine learning, deep learning, NLP and full-stack web.</p>
+
+    <form class="row g-2 mt-4" method="get">
+      <div class="col-sm-8 col-md-5">
+        <input type="search" name="q" value="{{ query }}" class="form-control" placeholder="Search by title or tech…">
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <button class="btn btn-glow w-100" type="submit"><i class="bi bi-search me-1"></i>Search</button>
+      </div>
+    </form>
+
+    <div class="d-flex flex-wrap gap-2 mt-4">
+      <a href="{% url 'core:project_list' %}" class="filter-pill {% if not active_category %}active{% endif %}">All</a>
+      {% for value, label in categories %}
+        <a href="?category={{ value }}" class="filter-pill {% if active_category == value %}active{% endif %}">{{ label }}</a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section pt-0">
+  <div class="container">
+    <div class="row g-4">
+      {% for project in projects %}
+      <div class="col-md-6 col-lg-4 reveal" data-delay="{{ forloop.counter0 }}0">
+        <article class="glass project-card">
+          <div class="project-media">
+            {% if project.image %}<img src="{{ project.image.url }}" alt="{{ project.title }}">{% else %}<i class="bi bi-braces-asterisk"></i>{% endif %}
+            {% if project.badge %}<span class="project-badge">{{ project.badge }}</span>{% endif %}
+          </div>
+          <div class="project-body">
+            <div class="small text-dim mb-1">{{ project.get_category_display }}</div>
+            <h2 class="project-title"><a href="{{ project.get_absolute_url }}">{{ project.title }}</a></h2>
+            <p class="project-desc">{{ project.short_description|truncatewords:26 }}</p>
+            <div class="my-3">{% for tech in project.tech_list|slice:":4" %}<span class="chip">{{ tech }}</span>{% endfor %}</div>
+            <a href="{{ project.get_absolute_url }}" class="small">Read more <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+      {% empty %}
+      <div class="col-12 text-center py-5">
+        <i class="bi bi-inbox display-4 text-dim"></i>
+        <p class="text-dim mt-3">No projects match that filter.</p>
+        <a href="{% url 'core:project_list' %}" class="btn btn-ghost btn-sm">Clear filters</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

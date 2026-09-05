@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Page not found{% endblock %}
+{% block nav_links %}<li class="nav-item"><a class="nav-link" href="{% url 'core:home' %}">Home</a></li>{% endblock %}
+{% block content %}
+<section class="section d-flex align-items-center" style="min-height:80vh;">
+  <div class="container text-center">
+    <div class="display-1 fw-bold text-gradient">404</div>
+    <h1 class="section-title mt-3">This page took a wrong turn</h1>
+    <p class="section-sub mx-auto">The URL you tried doesn't exist — but the rest of the portfolio does.</p>
+    <a href="{% url 'core:home' %}" class="btn btn-glow mt-3"><i class="bi bi-house me-2"></i>Back home</a>
+  </div>
+</section>
+{% endblock %}

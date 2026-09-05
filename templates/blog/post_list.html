@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block title %}Blog — {{ site_profile.full_name }}{% endblock %}
+
+{% block nav_links %}
+<li class="nav-item"><a class="nav-link" href="{% url 'core:home' %}">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="{% url 'core:project_list' %}">Projects</a></li>
+<li class="nav-item"><a class="nav-link active" href="{% url 'blog:post_list' %}">Blog</a></li>
+<li class="nav-item"><a class="nav-link" href="{% url 'core:home' %}#contact">Contact</a></li>
+{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+  <div class="container">
+    <div class="section-label"><i class="bi bi-pencil"></i>Writing</div>
+    <h1 class="section-title">{% if category %}{{ category.name }}{% else %}Notes &amp; write-ups{% endif %}</h1>
+    <p class="section-sub">Things I learned the hard way — models, bugs, and the occasional Django trick.</p>
+
+    <form class="row g-2 mt-4" method="get">
+      <div class="col-sm-8 col-md-5">
+        <input type="search" name="q" value="{{ query }}" class="form-control" placeholder="Search posts…">
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <button class="btn btn-glow w-100" type="submit"><i class="bi bi-search me-1"></i>Search</button>
+      </div>
+    </form>
+
+    {% if categories %}
+    <div class="d-flex flex-wrap gap-2 mt-4">
+      <a href="{% url 'blog:post_list' %}" class="filter-pill {% if not category %}active{% endif %}">All</a>
+      {% for cat in categories %}
+        <a href="{{ cat.get_absolute_url }}" class="filter-pill {% if category.pk == cat.pk %}active{% endif %}">{{ cat.name }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+<section class="section pt-0">
+  <div class="container">
+    <div class="row g-4">
+      {% for post in posts %}
+      <div class="col-md-6 col-lg-4 reveal" data-delay="{{ forloop.counter0 }}0">
+        <article class="glass post-card">
+          {% if post.cover_image %}
+            <img src="{{ post.cover_image.url }}" alt="{{ post.title }}" style="height:170px;object-fit:cover;">
+          {% endif %}
+          <div class="p-4 d-flex flex-column flex-grow-1">
+            <div class="post-meta mb-2">
+              {% if post.category %}<span class="chip chip-accent">{{ post.category.name }}</span>{% endif %}
+              <span class="ms-1">{{ post.published_at|date:"M j, Y" }} · {{ post.reading_minutes }} min</span>
+            </div>
+            <h2 class="h5 mb-2"><a href="{{ post.get_absolute_url }}" class="text-white">{{ post.title }}</a></h2>
+            <p class="text-muted-soft small flex-grow-1">{{ post.excerpt|truncatewords:24 }}</p>
+            <div>{% for tag in post.tag_list|slice:":3" %}<span class="chip">#{{ tag }}</span>{% endfor %}</div>
+            <a href="{{ post.get_absolute_url }}" class="small mt-3">Read post <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+      {% empty %}
+      <div class="col-12 text-center py-5">
+        <i class="bi bi-journal-text display-4 text-dim"></i>
+        <p class="text-dim mt-3">No posts published yet.</p>
+      </div>
+      {% endfor %}
+    </div>
+
+    {% if page_obj.has_other_pages %}
+    <nav class="mt-5" aria-label="Blog pagination">
+      <ul class="pagination justify-content-center">
+        {% if page_obj.has_previous %}
+          <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}{% if query %}&q={{ query }}{% endif %}">Previous</a></li>
+        {% endif %}
+        {% for num in page_obj.paginator.page_range %}
+          <li class="page-item {% if num == page_obj.number %}active{% endif %}">
+            <a class="page-link" href="?page={{ num }}{% if query %}&q={{ query }}{% endif %}">{{ num }}</a>
+          </li>
+        {% endfor %}
+        {% if page_obj.has_next %}
+          <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}{% if query %}&q={{ query }}{% endif %}">Next</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

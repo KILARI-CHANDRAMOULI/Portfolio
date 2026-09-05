@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Server error{% endblock %}
+{% block nav_links %}<li class="nav-item"><a class="nav-link" href="/">Home</a></li>{% endblock %}
+{% block content %}
+<section class="section d-flex align-items-center" style="min-height:80vh;">
+  <div class="container text-center">
+    <div class="display-1 fw-bold text-gradient">500</div>
+    <h1 class="section-title mt-3">Something broke on my end</h1>
+    <p class="section-sub mx-auto">Sorry about that. Try again in a moment.</p>
+    <a href="/" class="btn btn-glow mt-3"><i class="bi bi-house me-2"></i>Back home</a>
+  </div>
+</section>
+{% endblock %}
