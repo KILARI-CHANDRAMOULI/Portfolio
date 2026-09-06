@@ -44,9 +44,11 @@
       <div class="col-lg-5 hero-visual">
         <div class="avatar-ring mb-4">
           {% if profile.photo %}
-            <img src="{{ profile.photo.url }}" alt="{{ profile.full_name }}">
+            <img src="{{ profile.photo.url }}" alt="" onerror="this.hidden=true;this.nextElementSibling.hidden=false;">
+            <div class="avatar-fallback" hidden>{{ profile.full_name|initials }}</div>
           {% else %}
-            <div class="avatar-fallback">{{ profile.full_name|initials }}</div>
+            <img src="{% static 'img/profile.jpg' %}" alt="" onerror="this.hidden=true;this.nextElementSibling.hidden=false;">
+            <div class="avatar-fallback" hidden>{{ profile.full_name|initials }}</div>
           {% endif %}
         </div>
 

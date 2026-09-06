@@ -1,1144 +1,1144 @@
 [
-{
-  "model": "core.profile",
-  "pk": 1,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.499Z",
-    "updated_at": "2026-09-05T18:02:17.483Z",
-    "full_name": "Chandra Mouli Kilari",
-    "tagline": "Developer ~ Engineer",
-    "typed_roles": "machine learning systems, deep learning models, NLP & LLM pipelines, full-stack web apps",
-    "about": "I'm an M.Tech student in Information Technology at ABV-IIITM Gwalior, working at the intersection of machine learning research and software engineering. My thesis benchmarks 21 forecasting models for photovoltaic power across 4,928 evaluations — work that taught me as much about auditing broken pipelines as about building new ones.\r\n\r\nI like problems where the modelling and the engineering both matter: training a 10.7M-parameter Transformer from scratch, then wrapping the retrieval pipeline in something people can actually use. I write Python and C++ daily, build web apps with Django and Flask, and care a lot about reproducible, leakage-free evaluation.\r\n\r\nOutside coursework I've interned as a Data Science Intern at APSSDC, reached the finals of the Hitachi 30 Hacks hackathon with a blockchain payments app, and served as Joint Secretary of my college coding club.",
-    "email": "chandramoulikilari3@gmail.com",
-    "phone": "+91 8008163537",
-    "location": "Gwalior, Madhya Pradesh, India",
-    "github_username": "KILARI-CHANDRAMOULI",
-    "linkedin_url": "http://www.linkedin.com/in/kilarichandramouli-12b770252/",
-    "photo": "profile/KILARI_CHANDRA_MOULI_2025MIT-008.jpeg",
-    "resume": "resume/Moulis_CV.pdf",
-    "available_for_work": true,
-    "is_active": true
+  {
+    "model": "core.profile",
+    "pk": 1,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.499Z",
+      "updated_at": "2026-09-05T18:02:17.483Z",
+      "full_name": "Chandra Mouli Kilari",
+      "tagline": "Developer ~ Engineer",
+      "typed_roles": "machine learning systems, deep learning models, NLP & LLM pipelines, full-stack web apps",
+      "about": "I'm an M.Tech student in Information Technology at ABV-IIITM Gwalior, working at the intersection of machine learning research and software engineering. My thesis benchmarks 21 forecasting models for photovoltaic power across 4,928 evaluations — work that taught me as much about auditing broken pipelines as about building new ones.\r\n\r\nI like problems where the modelling and the engineering both matter: training a 10.7M-parameter Transformer from scratch, then wrapping the retrieval pipeline in something people can actually use. I write Python and C++ daily, build web apps with Django and Flask, and care a lot about reproducible, leakage-free evaluation.\r\n\r\nOutside coursework I've interned as a Data Science Intern at APSSDC, reached the finals of the Hitachi 30 Hacks hackathon with a blockchain payments app, and served as Joint Secretary of my college coding club.",
+      "email": "chandramoulikilari3@gmail.com",
+      "phone": "+91 8008163537",
+      "location": "Gwalior, Madhya Pradesh, India",
+      "github_username": "KILARI-CHANDRAMOULI",
+      "linkedin_url": "http://www.linkedin.com/in/kilarichandramouli-12b770252/",
+      "photo": "",
+      "resume": "",
+      "available_for_work": true,
+      "is_active": true
+    }
+  },
+  {
+    "model": "core.skillcategory",
+    "pk": 1,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.499Z",
+      "updated_at": "2026-09-05T17:49:41.499Z",
+      "name": "Programming Languages",
+      "icon": "bi-code-slash",
+      "description": "Languages I'm fluent in day to day.",
+      "order": 1
+    }
+  },
+  {
+    "model": "core.skillcategory",
+    "pk": 2,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.501Z",
+      "updated_at": "2026-09-05T17:49:41.501Z",
+      "name": "Machine Learning",
+      "icon": "bi-cpu",
+      "description": "Classical ML end to end.",
+      "order": 2
+    }
+  },
+  {
+    "model": "core.skillcategory",
+    "pk": 3,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.503Z",
+      "updated_at": "2026-09-05T17:49:41.503Z",
+      "name": "Deep Learning",
+      "icon": "bi-diagram-3",
+      "description": "Neural architectures and optimisation.",
+      "order": 3
+    }
+  },
+  {
+    "model": "core.skillcategory",
+    "pk": 4,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.505Z",
+      "updated_at": "2026-09-05T17:49:41.505Z",
+      "name": "LLMs & NLP",
+      "icon": "bi-chat-square-text",
+      "description": "Language models, retrieval and text pipelines.",
+      "order": 4
+    }
+  },
+  {
+    "model": "core.skillcategory",
+    "pk": 5,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.507Z",
+      "updated_at": "2026-09-05T17:49:41.507Z",
+      "name": "Data Science & Analysis",
+      "icon": "bi-bar-chart-line",
+      "description": "Getting signal out of messy data.",
+      "order": 5
+    }
+  },
+  {
+    "model": "core.skillcategory",
+    "pk": 6,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.510Z",
+      "updated_at": "2026-09-05T17:49:41.510Z",
+      "name": "Time Series & Forecasting",
+      "icon": "bi-graph-up-arrow",
+      "description": "M.Tech thesis territory.",
+      "order": 6
+    }
+  },
+  {
+    "model": "core.skillcategory",
+    "pk": 7,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.511Z",
+      "updated_at": "2026-09-05T17:49:41.511Z",
+      "name": "Web Development",
+      "icon": "bi-window-stack",
+      "description": "Full-stack, mostly Python-backed.",
+      "order": 7
+    }
+  },
+  {
+    "model": "core.skillcategory",
+    "pk": 8,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.513Z",
+      "updated_at": "2026-09-05T17:49:41.513Z",
+      "name": "Core CS & Tools",
+      "icon": "bi-hdd-stack",
+      "description": "The fundamentals interviewers ask about.",
+      "order": 8
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 1,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.500Z",
+      "updated_at": "2026-09-05T17:49:41.500Z",
+      "category": 1,
+      "name": "Python",
+      "proficiency": 95,
+      "is_featured": true,
+      "order": 0
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 2,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.500Z",
+      "updated_at": "2026-09-05T17:49:41.500Z",
+      "category": 1,
+      "name": "C++",
+      "proficiency": 85,
+      "is_featured": true,
+      "order": 1
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 3,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.501Z",
+      "updated_at": "2026-09-05T17:49:41.501Z",
+      "category": 1,
+      "name": "C",
+      "proficiency": 80,
+      "is_featured": true,
+      "order": 2
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 4,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.501Z",
+      "updated_at": "2026-09-05T17:49:41.501Z",
+      "category": 1,
+      "name": "SQL",
+      "proficiency": 80,
+      "is_featured": false,
+      "order": 3
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 5,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.501Z",
+      "updated_at": "2026-09-05T17:49:41.501Z",
+      "category": 2,
+      "name": "Supervised Learning",
+      "proficiency": 90,
+      "is_featured": true,
+      "order": 0
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 6,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.502Z",
+      "updated_at": "2026-09-05T17:49:41.502Z",
+      "category": 2,
+      "name": "Unsupervised Learning",
+      "proficiency": 85,
+      "is_featured": true,
+      "order": 1
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 7,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.502Z",
+      "updated_at": "2026-09-05T17:49:41.502Z",
+      "category": 2,
+      "name": "Feature Engineering",
+      "proficiency": 80,
+      "is_featured": false,
+      "order": 2
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 8,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.502Z",
+      "updated_at": "2026-09-05T17:49:41.502Z",
+      "category": 2,
+      "name": "Model Evaluation",
+      "proficiency": 80,
+      "is_featured": false,
+      "order": 3
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 9,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.503Z",
+      "updated_at": "2026-09-05T17:49:41.503Z",
+      "category": 2,
+      "name": "Scikit-learn",
+      "proficiency": 80,
+      "is_featured": false,
+      "order": 4
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 10,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.503Z",
+      "updated_at": "2026-09-05T17:49:41.503Z",
+      "category": 2,
+      "name": "XGBoost",
+      "proficiency": 80,
+      "is_featured": false,
+      "order": 5
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 11,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.503Z",
+      "updated_at": "2026-09-05T17:49:41.503Z",
+      "category": 2,
+      "name": "LightGBM",
+      "proficiency": 80,
+      "is_featured": false,
+      "order": 6
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 12,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.504Z",
+      "updated_at": "2026-09-05T17:49:41.504Z",
+      "category": 3,
+      "name": "Neural Networks (ANN, CNN, RNN)",
+      "proficiency": 88,
+      "is_featured": true,
+      "order": 0
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 13,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.504Z",
+      "updated_at": "2026-09-05T17:49:41.504Z",
+      "category": 3,
+      "name": "LSTM / GRU",
+      "proficiency": 80,
+      "is_featured": false,
+      "order": 1
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 14,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.504Z",
+      "updated_at": "2026-09-05T17:49:41.504Z",
+      "category": 3,
+      "name": "Model Optimization",
+      "proficiency": 80,
+      "is_featured": false,
+      "order": 2
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 15,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.504Z",
+      "updated_at": "2026-09-05T17:49:41.504Z",
+      "category": 3,
+      "name": "TensorFlow",
+      "proficiency": 80,
+      "is_featured": false,
+      "order": 3
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 16,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.505Z",
+      "updated_at": "2026-09-05T17:49:41.505Z",
+      "category": 3,
+      "name": "PyTorch",
+      "proficiency": 80,
+      "is_featured": false,
+      "order": 4
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 17,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.505Z",
+      "updated_at": "2026-09-05T17:49:41.505Z",
+      "category": 4,
+      "name": "Transformers",
+      "proficiency": 90,
+      "is_featured": true,
+      "order": 0
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 18,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.505Z",
+      "updated_at": "2026-09-05T17:49:41.505Z",
+      "category": 4,
+      "name": "RAG",
+      "proficiency": 88,
+      "is_featured": true,
+      "order": 1
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 19,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.506Z",
+      "updated_at": "2026-09-05T17:49:41.506Z",
+      "category": 4,
+      "name": "Prompt Engineering",
+      "proficiency": 80,
+      "is_featured": false,
+      "order": 2
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 20,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.506Z",
+      "updated_at": "2026-09-05T17:49:41.506Z",
+      "category": 4,
+      "name": "Hugging Face",
+      "proficiency": 80,
+      "is_featured": false,
+      "order": 3
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 21,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.506Z",
+      "updated_at": "2026-09-05T17:49:41.506Z",
+      "category": 4,
+      "name": "Tokenization",
+      "proficiency": 80,
+      "is_featured": false,
+      "order": 4
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 22,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.507Z",
+      "updated_at": "2026-09-05T17:49:41.507Z",
+      "category": 4,
+      "name": "Embeddings",
+      "proficiency": 80,
+      "is_featured": false,
+      "order": 5
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 23,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.507Z",
+      "updated_at": "2026-09-05T17:49:41.507Z",
+      "category": 4,
+      "name": "N-gram Models",
+      "proficiency": 80,
+      "is_featured": false,
+      "order": 6
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 24,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.507Z",
+      "updated_at": "2026-09-05T17:49:41.507Z",
+      "category": 4,
+      "name": "HMM",
+      "proficiency": 80,
+      "is_featured": false,
+      "order": 7
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 25,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.508Z",
+      "updated_at": "2026-09-05T17:49:41.508Z",
+      "category": 5,
+      "name": "Exploratory Data Analysis",
+      "proficiency": 88,
+      "is_featured": true,
+      "order": 0
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 26,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.508Z",
+      "updated_at": "2026-09-05T17:49:41.508Z",
+      "category": 5,
+      "name": "Data Cleaning",
+      "proficiency": 80,
+      "is_featured": false,
+      "order": 1
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 27,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.509Z",
+      "updated_at": "2026-09-05T17:49:41.509Z",
+      "category": 5,
+      "name": "Data Visualization",
+      "proficiency": 80,
+      "is_featured": false,
+      "order": 2
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 28,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.509Z",
+      "updated_at": "2026-09-05T17:49:41.509Z",
+      "category": 5,
+      "name": "Pandas",
+      "proficiency": 80,
+      "is_featured": false,
+      "order": 3
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 29,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.509Z",
+      "updated_at": "2026-09-05T17:49:41.509Z",
+      "category": 5,
+      "name": "NumPy",
+      "proficiency": 80,
+      "is_featured": false,
+      "order": 4
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 30,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.510Z",
+      "updated_at": "2026-09-05T17:49:41.510Z",
+      "category": 6,
+      "name": "Single & Multi-Step Forecasting",
+      "proficiency": 90,
+      "is_featured": true,
+      "order": 0
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 31,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.510Z",
+      "updated_at": "2026-09-05T17:49:41.510Z",
+      "category": 6,
+      "name": "Lag Features",
+      "proficiency": 80,
+      "is_featured": false,
+      "order": 1
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 32,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.510Z",
+      "updated_at": "2026-09-05T17:49:41.510Z",
+      "category": 6,
+      "name": "Statistical Analysis",
+      "proficiency": 80,
+      "is_featured": false,
+      "order": 2
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 33,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.511Z",
+      "updated_at": "2026-09-05T17:49:41.511Z",
+      "category": 6,
+      "name": "Leakage-safe Evaluation",
+      "proficiency": 80,
+      "is_featured": false,
+      "order": 3
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 34,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.512Z",
+      "updated_at": "2026-09-05T17:49:41.512Z",
+      "category": 7,
+      "name": "Django",
+      "proficiency": 88,
+      "is_featured": true,
+      "order": 0
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 35,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.512Z",
+      "updated_at": "2026-09-05T17:49:41.512Z",
+      "category": 7,
+      "name": "HTML / CSS",
+      "proficiency": 90,
+      "is_featured": true,
+      "order": 1
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 36,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.512Z",
+      "updated_at": "2026-09-05T17:49:41.512Z",
+      "category": 7,
+      "name": "JavaScript",
+      "proficiency": 82,
+      "is_featured": true,
+      "order": 2
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 37,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.512Z",
+      "updated_at": "2026-09-05T17:49:41.512Z",
+      "category": 7,
+      "name": "Bootstrap",
+      "proficiency": 80,
+      "is_featured": false,
+      "order": 3
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 38,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.513Z",
+      "updated_at": "2026-09-05T17:49:41.513Z",
+      "category": 7,
+      "name": "Flask",
+      "proficiency": 80,
+      "is_featured": false,
+      "order": 4
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 39,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.513Z",
+      "updated_at": "2026-09-05T17:49:41.513Z",
+      "category": 7,
+      "name": "Streamlit",
+      "proficiency": 80,
+      "is_featured": false,
+      "order": 5
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 40,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.513Z",
+      "updated_at": "2026-09-05T17:49:41.513Z",
+      "category": 8,
+      "name": "Data Structures & Algorithms",
+      "proficiency": 90,
+      "is_featured": true,
+      "order": 0
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 41,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.514Z",
+      "updated_at": "2026-09-05T17:49:41.514Z",
+      "category": 8,
+      "name": "OOP",
+      "proficiency": 80,
+      "is_featured": false,
+      "order": 1
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 42,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.514Z",
+      "updated_at": "2026-09-05T17:49:41.514Z",
+      "category": 8,
+      "name": "DBMS",
+      "proficiency": 80,
+      "is_featured": false,
+      "order": 2
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 43,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.514Z",
+      "updated_at": "2026-09-05T17:49:41.514Z",
+      "category": 8,
+      "name": "Operating Systems",
+      "proficiency": 80,
+      "is_featured": false,
+      "order": 3
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 44,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.514Z",
+      "updated_at": "2026-09-05T17:49:41.514Z",
+      "category": 8,
+      "name": "Computer Networks",
+      "proficiency": 80,
+      "is_featured": false,
+      "order": 4
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 45,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.515Z",
+      "updated_at": "2026-09-05T17:49:41.515Z",
+      "category": 8,
+      "name": "Git / GitHub",
+      "proficiency": 80,
+      "is_featured": false,
+      "order": 5
+    }
+  },
+  {
+    "model": "core.education",
+    "pk": 1,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.515Z",
+      "updated_at": "2026-09-05T17:49:41.515Z",
+      "institution": "Atal Bihari Vajpayee Indian Institute of Information Technology and Management",
+      "degree": "M.Tech",
+      "field_of_study": "Information Technology",
+      "location": "Gwalior, MP",
+      "start_year": 2025,
+      "end_year": null,
+      "score": "Aggregate: 100%",
+      "order": 1
+    }
+  },
+  {
+    "model": "core.education",
+    "pk": 2,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.516Z",
+      "updated_at": "2026-09-05T17:49:41.516Z",
+      "institution": "Rajiv Gandhi University of Knowledge Technologies",
+      "degree": "B.Tech",
+      "field_of_study": "Computer Science and Engineering",
+      "location": "Srikakulam, AP",
+      "start_year": 2021,
+      "end_year": 2025,
+      "score": "Aggregate: 89.7%",
+      "order": 2
+    }
+  },
+  {
+    "model": "core.education",
+    "pk": 3,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.516Z",
+      "updated_at": "2026-09-05T17:49:41.516Z",
+      "institution": "Rajiv Gandhi University of Knowledge Technologies",
+      "degree": "Intermediate",
+      "field_of_study": "Maths, Physics and Chemistry",
+      "location": "Srikakulam, AP",
+      "start_year": 2019,
+      "end_year": 2021,
+      "score": "Aggregate: 98.3%",
+      "order": 3
+    }
+  },
+  {
+    "model": "core.education",
+    "pk": 4,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.516Z",
+      "updated_at": "2026-09-05T17:49:41.516Z",
+      "institution": "A.P Model School, Ganguvari Sigadam",
+      "degree": "SSC",
+      "field_of_study": "",
+      "location": "Andhra Pradesh",
+      "start_year": 2018,
+      "end_year": 2019,
+      "score": "Aggregate: 100%",
+      "order": 4
+    }
+  },
+  {
+    "model": "core.experience",
+    "pk": 1,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.516Z",
+      "updated_at": "2026-09-05T17:49:41.516Z",
+      "role": "Data Science Intern",
+      "organisation": "Andhra Pradesh State Skill Development Corporation (APSSDC)",
+      "location": "Andhra Pradesh, India",
+      "start_date": "2024-05-01",
+      "end_date": "2024-06-30",
+      "summary": "Built and shipped an end-to-end sentiment analysis pipeline over real customer feedback data.",
+      "tech_stack": "Python, Machine Learning, NLP, Scikit-learn, Pandas, NLTK",
+      "order": 1
+    }
+  },
+  {
+    "model": "core.experiencebullet",
+    "pk": 1,
+    "fields": {
+      "experience": 1,
+      "text": "Developed an NLP-based sentiment analysis model achieving 88% accuracy.",
+      "order": 0
+    }
+  },
+  {
+    "model": "core.experiencebullet",
+    "pk": 2,
+    "fields": {
+      "experience": 1,
+      "text": "Processed and analyzed 5,000+ records using data cleaning, preprocessing and feature engineering.",
+      "order": 1
+    }
+  },
+  {
+    "model": "core.experiencebullet",
+    "pk": 3,
+    "fields": {
+      "experience": 1,
+      "text": "Improved data quality by 30% through effective preprocessing and validation techniques.",
+      "order": 2
+    }
+  },
+  {
+    "model": "core.experiencebullet",
+    "pk": 4,
+    "fields": {
+      "experience": 1,
+      "text": "Optimized the inference pipeline, reducing prediction time by 20%.",
+      "order": 3
+    }
+  },
+  {
+    "model": "core.project",
+    "pk": 1,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.517Z",
+      "updated_at": "2026-09-05T17:49:41.517Z",
+      "title": "Large-Scale Benchmarking Pipeline for Photovoltaic Power Forecasting",
+      "slug": "large-scale-benchmarking-pipeline-for-photovoltaic-power-forecasting",
+      "subtitle": "21 models · 4 sites · 7 horizons · 4,928 evaluations",
+      "category": "dl",
+      "short_description": "A reproducible benchmark of 21 forecasting models for solar power across 4 sites, 7 horizons and 2 temporal resolutions — plus an audit that overturned the study's original conclusion.",
+      "description": "Implemented Informer, Autoformer, FEDformer and the Temporal Fusion Transformer directly from their source papers, alongside statistical and gradient-boosted baselines, and evaluated every combination of site, horizon and resolution.\nAudited the existing forecasting pipeline and fixed 13 defects. The critical one returned single-step forecasts under multi-step labels, which made statistical models look better than deep learning at long horizons; correcting it reversed the finding entirely.\nRebuilt evaluation on leakage-safe foundations: chronological splits, train/test embargoes, and scaling fitted only on the training block.",
+      "highlights": "4,928 model evaluations across 21 architectures\nReimplemented 4 transformer forecasters from their papers\nFound and fixed 13 pipeline defects, one of which inverted the conclusion\nLeakage-safe chronological splits with train/test embargoes",
+      "tech_stack": "Python, PyTorch, TensorFlow, Transformers, XGBoost, pandas, NumPy",
+      "image": "",
+      "github_url": "",
+      "live_url": "",
+      "badge": "M.Tech Thesis",
+      "is_featured": true,
+      "order": 1
+    }
+  },
+  {
+    "model": "core.project",
+    "pk": 2,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.518Z",
+      "updated_at": "2026-09-05T17:49:41.518Z",
+      "title": "Retrieval-Augmented Narrative Consistency Verification",
+      "slug": "retrieval-augmented-narrative-consistency-verification",
+      "subtitle": "A 10.7M-parameter Transformer trained from scratch",
+      "category": "nlp",
+      "short_description": "Designed and trained a BERT-style Transformer with a hybrid BM25 + semantic retrieval RAG pipeline to verify whether narrative statements stay consistent with their source text.",
+      "description": "Rather than fine-tuning an off-the-shelf checkpoint, the encoder was designed and trained from scratch at 10.7M parameters so every architectural choice could be ablated.\nRetrieval combines lexical BM25 with dense semantic search, so the model sees evidence that keyword search alone would miss and vice versa.",
+      "highlights": "97.56% accuracy on the verification task\n0.97 Macro F1 and 0.99 ROC-AUC\nHybrid BM25 + dense retrieval for evidence selection\n10.7M-parameter encoder trained from scratch",
+      "tech_stack": "PyTorch, Transformers, RAG, BM25, NLP, Python",
+      "image": "",
+      "github_url": "",
+      "live_url": "",
+      "badge": "Research",
+      "is_featured": true,
+      "order": 2
+    }
+  },
+  {
+    "model": "core.project",
+    "pk": 3,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.518Z",
+      "updated_at": "2026-09-05T17:49:41.518Z",
+      "title": "AI-Powered Multimodal E-commerce Price Prediction System",
+      "slug": "ai-powered-multimodal-e-commerce-price-prediction-system",
+      "subtitle": "Text + image features feeding a stacked ensemble",
+      "category": "ml",
+      "short_description": "An end-to-end system predicting e-commerce product prices from both product descriptions and product images, served through a Streamlit app for real-time predictions.",
+      "description": "Textual features cover keywords, quality indicators and numeric analysis of the listing copy; deep image features come from pre-trained MobileNetV2 and ResNet50 backbones.\nPredictions come from a super ensemble of XGBoost, LightGBM, Random Forest, Gradient Boosting and Ridge Regression, with automated reporting built into the Streamlit interface.",
+      "highlights": "Multimodal features from product text and images\nMobileNetV2 and ResNet50 used as frozen feature extractors\nFive-model stacked ensemble for the final prediction\nStreamlit app for real-time pricing and automated reports",
+      "tech_stack": "Python, TensorFlow, Scikit-learn, XGBoost, LightGBM, Streamlit, NLP",
+      "image": "",
+      "github_url": "",
+      "live_url": "",
+      "badge": "End-to-end",
+      "is_featured": true,
+      "order": 3
+    }
+  },
+  {
+    "model": "core.project",
+    "pk": 4,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.519Z",
+      "updated_at": "2026-09-05T17:49:41.519Z",
+      "title": "COIN — Currency Operating Interface Navigation",
+      "slug": "coin-currency-operating-interface-navigation",
+      "subtitle": "Blockchain-backed group payments with a voice assistant",
+      "category": "web",
+      "short_description": "A digital payments application built on customised blockchain technology, supporting group transactions and an integrated voice assistant. Finalist at the Hitachi 30 Hacks hackathon.",
+      "description": "COIN reimagines everyday payments around groups rather than individuals: splitting, settling and tracking shared expenses are first-class operations rather than afterthoughts.\nA voice assistant layer lets users initiate and confirm transactions hands-free, and the customised blockchain layer keeps a verifiable ledger of group activity.",
+      "highlights": "Finalist at the Hitachi 30 Hacks Hackathon, Delhi 2024\nGroup transaction flows built on a customised blockchain\nIntegrated voice assistant for hands-free payments\nFull-stack build across frontend, backend and ledger",
+      "tech_stack": "Full Stack Web, Blockchain, JavaScript, Python, HTML, CSS",
+      "image": "",
+      "github_url": "",
+      "live_url": "",
+      "badge": "Hackathon Finalist",
+      "is_featured": false,
+      "order": 4
+    }
+  },
+  {
+    "model": "core.achievement",
+    "pk": 1,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.519Z",
+      "updated_at": "2026-09-05T17:49:41.519Z",
+      "kind": "award",
+      "title": "Joint Secretary, SGC Coding Club",
+      "issuer": "RGUKT Srikakulam",
+      "period": "2022 – 2024",
+      "description": "Conducted tests on HackerRank to sharpen students' coding skills.\nOrganised coding events and workshops that grew participation.\nBuilt a competitive programming culture on campus.",
+      "url": "",
+      "icon": "bi-people",
+      "order": 1
+    }
+  },
+  {
+    "model": "core.achievement",
+    "pk": 2,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.520Z",
+      "updated_at": "2026-09-05T17:49:41.520Z",
+      "kind": "award",
+      "title": "Finalist — HITACHI 30 Hacks Hackathon",
+      "issuer": "Hitachi Group",
+      "period": "2023 – 2024",
+      "description": "Reached the finals with COIN, a blockchain-based digital payments app.\nRecognised for group transactions and voice-assistant innovation.",
+      "url": "",
+      "icon": "bi-trophy",
+      "order": 2
+    }
+  },
+  {
+    "model": "core.achievement",
+    "pk": 3,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.520Z",
+      "updated_at": "2026-09-05T17:49:41.520Z",
+      "kind": "award",
+      "title": "Event Organizer, College Tech Fest",
+      "issuer": "RGUKT Srikakulam",
+      "period": "2023 – 2024",
+      "description": "Managed logistics and scheduling for technical events.\nCollaborated with faculty and students on sessions and showcases.",
+      "url": "",
+      "icon": "bi-calendar-event",
+      "order": 3
+    }
+  },
+  {
+    "model": "core.achievement",
+    "pk": 4,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.520Z",
+      "updated_at": "2026-09-05T17:49:41.520Z",
+      "kind": "award",
+      "title": "Qualified GATE 2025",
+      "issuer": "IIT / GATE",
+      "period": "2025",
+      "description": "Qualified GATE 2025, demonstrating command of core engineering subjects.",
+      "url": "",
+      "icon": "bi-patch-check",
+      "order": 4
+    }
+  },
+  {
+    "model": "core.achievement",
+    "pk": 5,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.520Z",
+      "updated_at": "2026-09-05T17:49:41.520Z",
+      "kind": "cert",
+      "title": "First Place — Code-O-Fiesta, Teckzite 2022",
+      "issuer": "RGUKT Nuzvid",
+      "period": "2022 – 2023",
+      "description": "",
+      "url": "",
+      "icon": "bi-award",
+      "order": 1
+    }
+  },
+  {
+    "model": "core.achievement",
+    "pk": 6,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.521Z",
+      "updated_at": "2026-09-05T17:49:41.521Z",
+      "kind": "cert",
+      "title": "Hackathon Participation — COIN Project",
+      "issuer": "Hitachi Group, Delhi",
+      "period": "2023 – 2024",
+      "description": "",
+      "url": "",
+      "icon": "bi-patch-check",
+      "order": 2
+    }
+  },
+  {
+    "model": "core.codingprofile",
+    "pk": 1,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.521Z",
+      "updated_at": "2026-09-05T17:49:41.521Z",
+      "platform": "LeetCode",
+      "username": "Mouli2025008",
+      "url": "https://leetcode.com/u/Mouli2025008/",
+      "icon": "bi-code-square",
+      "stat_label": "",
+      "stat_value": "",
+      "order": 1
+    }
+  },
+  {
+    "model": "core.codingprofile",
+    "pk": 2,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.521Z",
+      "updated_at": "2026-09-05T17:49:41.521Z",
+      "platform": "GeeksforGeeks",
+      "username": "Mouligfg",
+      "url": "https://www.geeksforgeeks.org/user/Mouligfg/",
+      "icon": "bi-braces",
+      "stat_label": "",
+      "stat_value": "",
+      "order": 2
+    }
+  },
+  {
+    "model": "core.codingprofile",
+    "pk": 3,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.522Z",
+      "updated_at": "2026-09-06T06:37:12.337Z",
+      "platform": "HackerRank",
+      "username": "Moulihr",
+      "url": "https://www.hackerrank.com/profile/chandramoulikil1",
+      "icon": "bi-terminal",
+      "stat_label": "",
+      "stat_value": "",
+      "order": 3
+    }
+  },
+  {
+    "model": "core.language",
+    "pk": 1,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.522Z",
+      "updated_at": "2026-09-05T17:49:41.522Z",
+      "name": "English",
+      "level": "Fluent",
+      "order": 1
+    }
+  },
+  {
+    "model": "core.language",
+    "pk": 2,
+    "fields": {
+      "created_at": "2026-09-05T17:49:41.522Z",
+      "updated_at": "2026-09-05T17:49:41.522Z",
+      "name": "Telugu",
+      "level": "Fluent",
+      "order": 2
+    }
+  },
+  {
+    "model": "blog.category",
+    "pk": 1,
+    "fields": {
+      "name": "Machine Learning",
+      "slug": "machine-learning"
+    }
+  },
+  {
+    "model": "blog.category",
+    "pk": 2,
+    "fields": {
+      "name": "Web Development",
+      "slug": "web-development"
+    }
+  },
+  {
+    "model": "blog.post",
+    "pk": 1,
+    "fields": {
+      "title": "The bug that reversed my thesis conclusion",
+      "slug": "the-bug-that-reversed-my-thesis-conclusion",
+      "category": 1,
+      "excerpt": "For weeks the statistical baselines beat every deep learning model at long horizons. The models were fine. The evaluation was not.",
+      "body": "Every benchmark I ran told the same story: at long forecast horizons, humble statistical models outperformed Informer, Autoformer and FEDformer. It was a clean, publishable, counterintuitive result — the kind you should distrust.\n\nThe pipeline was returning single-step forecasts while labelling them as multi-step. A one-step-ahead prediction is a far easier problem than a 24-step-ahead one, so the baselines were being scored on an easy task while the deep models were doing the hard one. Correcting the alignment reversed the ranking completely.\n\nThat was one of thirteen defects I found while auditing the pipeline. The lesson was not about transformers at all: a result that flatters your baselines deserves the same scrutiny as one that flatters your novel method. Now every pipeline I build gets chronological splits, train/test embargoes, and scaling fitted on the training block only — before I look at a single metric.",
+      "cover_image": "",
+      "tags": "forecasting, debugging, evaluation, transformers",
+      "reading_minutes": 1,
+      "status": "published",
+      "published_at": "2026-08-24T17:49:41.523Z",
+      "views": 0,
+      "created_at": "2026-09-05T17:49:41.524Z",
+      "updated_at": "2026-09-05T17:49:41.524Z"
+    }
+  },
+  {
+    "model": "blog.post",
+    "pk": 2,
+    "fields": {
+      "title": "Why I trained a 10.7M-parameter Transformer from scratch",
+      "slug": "why-i-trained-a-107m-parameter-transformer-from-scratch",
+      "category": 1,
+      "excerpt": "Fine-tuning a checkpoint would have been faster. Building the encoder myself is what actually taught me how attention behaves.",
+      "body": "The obvious move for narrative consistency verification is to fine-tune a pre-trained BERT. I built a 10.7M-parameter encoder from scratch instead, and I'd make the same call again.\n\nAt that scale every architectural decision is observable. Change the head count, the layer depth or the positional scheme, and you see the effect in hours, not days. Ablations stop being a formality and become the way you actually understand the model.\n\nThe retrieval side mattered just as much. Pairing lexical BM25 with dense semantic search surfaced evidence that neither method found alone — exact-name matches that embeddings blurred, and paraphrases that keywords missed entirely. The final system reached 97.56% accuracy with a 0.99 ROC-AUC, but the retrieval quality moved that number more than any modelling change did.",
+      "cover_image": "",
+      "tags": "transformers, RAG, NLP, PyTorch",
+      "reading_minutes": 1,
+      "status": "published",
+      "published_at": "2026-08-06T17:49:41.523Z",
+      "views": 0,
+      "created_at": "2026-09-05T17:49:41.524Z",
+      "updated_at": "2026-09-05T17:49:41.524Z"
+    }
+  },
+  {
+    "model": "blog.post",
+    "pk": 3,
+    "fields": {
+      "title": "Building this portfolio with Django instead of static HTML",
+      "slug": "building-this-portfolio-with-django-instead-of-static-html",
+      "category": 2,
+      "excerpt": "Hardcoding a portfolio in HTML is faster on day one and painful on day sixty. Here's what the database bought me.",
+      "body": "This site could have been one long index.html. Instead every section — projects, skills, education, achievements, blog posts — is a Django model, edited through the admin.\n\nThe practical payoff is that adding a project takes a form submission, not a deploy. Filtering, search and pagination come nearly free from the ORM. The contact form saves to the database and shows unread messages in the admin, so nothing depends on an SMTP server being configured correctly.\n\nThe interview payoff is bigger. 'I built my own portfolio CMS' invites questions about models, migrations, query optimisation and the admin — all things I can talk about at length because I made the decisions. A static page invites no questions at all.",
+      "cover_image": "",
+      "tags": "django, bootstrap, python, web",
+      "reading_minutes": 1,
+      "status": "published",
+      "published_at": "2026-09-02T17:49:41.523Z",
+      "views": 0,
+      "created_at": "2026-09-05T17:49:41.524Z",
+      "updated_at": "2026-09-05T17:49:41.524Z"
+    }
   }
-},
-{
-  "model": "core.skillcategory",
-  "pk": 1,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.499Z",
-    "updated_at": "2026-09-05T17:49:41.499Z",
-    "name": "Programming Languages",
-    "icon": "bi-code-slash",
-    "description": "Languages I'm fluent in day to day.",
-    "order": 1
-  }
-},
-{
-  "model": "core.skillcategory",
-  "pk": 2,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.501Z",
-    "updated_at": "2026-09-05T17:49:41.501Z",
-    "name": "Machine Learning",
-    "icon": "bi-cpu",
-    "description": "Classical ML end to end.",
-    "order": 2
-  }
-},
-{
-  "model": "core.skillcategory",
-  "pk": 3,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.503Z",
-    "updated_at": "2026-09-05T17:49:41.503Z",
-    "name": "Deep Learning",
-    "icon": "bi-diagram-3",
-    "description": "Neural architectures and optimisation.",
-    "order": 3
-  }
-},
-{
-  "model": "core.skillcategory",
-  "pk": 4,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.505Z",
-    "updated_at": "2026-09-05T17:49:41.505Z",
-    "name": "LLMs & NLP",
-    "icon": "bi-chat-square-text",
-    "description": "Language models, retrieval and text pipelines.",
-    "order": 4
-  }
-},
-{
-  "model": "core.skillcategory",
-  "pk": 5,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.507Z",
-    "updated_at": "2026-09-05T17:49:41.507Z",
-    "name": "Data Science & Analysis",
-    "icon": "bi-bar-chart-line",
-    "description": "Getting signal out of messy data.",
-    "order": 5
-  }
-},
-{
-  "model": "core.skillcategory",
-  "pk": 6,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.510Z",
-    "updated_at": "2026-09-05T17:49:41.510Z",
-    "name": "Time Series & Forecasting",
-    "icon": "bi-graph-up-arrow",
-    "description": "M.Tech thesis territory.",
-    "order": 6
-  }
-},
-{
-  "model": "core.skillcategory",
-  "pk": 7,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.511Z",
-    "updated_at": "2026-09-05T17:49:41.511Z",
-    "name": "Web Development",
-    "icon": "bi-window-stack",
-    "description": "Full-stack, mostly Python-backed.",
-    "order": 7
-  }
-},
-{
-  "model": "core.skillcategory",
-  "pk": 8,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.513Z",
-    "updated_at": "2026-09-05T17:49:41.513Z",
-    "name": "Core CS & Tools",
-    "icon": "bi-hdd-stack",
-    "description": "The fundamentals interviewers ask about.",
-    "order": 8
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 1,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.500Z",
-    "updated_at": "2026-09-05T17:49:41.500Z",
-    "category": 1,
-    "name": "Python",
-    "proficiency": 95,
-    "is_featured": true,
-    "order": 0
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 2,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.500Z",
-    "updated_at": "2026-09-05T17:49:41.500Z",
-    "category": 1,
-    "name": "C++",
-    "proficiency": 85,
-    "is_featured": true,
-    "order": 1
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 3,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.501Z",
-    "updated_at": "2026-09-05T17:49:41.501Z",
-    "category": 1,
-    "name": "C",
-    "proficiency": 80,
-    "is_featured": true,
-    "order": 2
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 4,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.501Z",
-    "updated_at": "2026-09-05T17:49:41.501Z",
-    "category": 1,
-    "name": "SQL",
-    "proficiency": 80,
-    "is_featured": false,
-    "order": 3
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 5,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.501Z",
-    "updated_at": "2026-09-05T17:49:41.501Z",
-    "category": 2,
-    "name": "Supervised Learning",
-    "proficiency": 90,
-    "is_featured": true,
-    "order": 0
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 6,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.502Z",
-    "updated_at": "2026-09-05T17:49:41.502Z",
-    "category": 2,
-    "name": "Unsupervised Learning",
-    "proficiency": 85,
-    "is_featured": true,
-    "order": 1
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 7,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.502Z",
-    "updated_at": "2026-09-05T17:49:41.502Z",
-    "category": 2,
-    "name": "Feature Engineering",
-    "proficiency": 80,
-    "is_featured": false,
-    "order": 2
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 8,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.502Z",
-    "updated_at": "2026-09-05T17:49:41.502Z",
-    "category": 2,
-    "name": "Model Evaluation",
-    "proficiency": 80,
-    "is_featured": false,
-    "order": 3
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 9,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.503Z",
-    "updated_at": "2026-09-05T17:49:41.503Z",
-    "category": 2,
-    "name": "Scikit-learn",
-    "proficiency": 80,
-    "is_featured": false,
-    "order": 4
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 10,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.503Z",
-    "updated_at": "2026-09-05T17:49:41.503Z",
-    "category": 2,
-    "name": "XGBoost",
-    "proficiency": 80,
-    "is_featured": false,
-    "order": 5
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 11,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.503Z",
-    "updated_at": "2026-09-05T17:49:41.503Z",
-    "category": 2,
-    "name": "LightGBM",
-    "proficiency": 80,
-    "is_featured": false,
-    "order": 6
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 12,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.504Z",
-    "updated_at": "2026-09-05T17:49:41.504Z",
-    "category": 3,
-    "name": "Neural Networks (ANN, CNN, RNN)",
-    "proficiency": 88,
-    "is_featured": true,
-    "order": 0
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 13,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.504Z",
-    "updated_at": "2026-09-05T17:49:41.504Z",
-    "category": 3,
-    "name": "LSTM / GRU",
-    "proficiency": 80,
-    "is_featured": false,
-    "order": 1
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 14,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.504Z",
-    "updated_at": "2026-09-05T17:49:41.504Z",
-    "category": 3,
-    "name": "Model Optimization",
-    "proficiency": 80,
-    "is_featured": false,
-    "order": 2
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 15,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.504Z",
-    "updated_at": "2026-09-05T17:49:41.504Z",
-    "category": 3,
-    "name": "TensorFlow",
-    "proficiency": 80,
-    "is_featured": false,
-    "order": 3
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 16,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.505Z",
-    "updated_at": "2026-09-05T17:49:41.505Z",
-    "category": 3,
-    "name": "PyTorch",
-    "proficiency": 80,
-    "is_featured": false,
-    "order": 4
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 17,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.505Z",
-    "updated_at": "2026-09-05T17:49:41.505Z",
-    "category": 4,
-    "name": "Transformers",
-    "proficiency": 90,
-    "is_featured": true,
-    "order": 0
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 18,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.505Z",
-    "updated_at": "2026-09-05T17:49:41.505Z",
-    "category": 4,
-    "name": "RAG",
-    "proficiency": 88,
-    "is_featured": true,
-    "order": 1
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 19,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.506Z",
-    "updated_at": "2026-09-05T17:49:41.506Z",
-    "category": 4,
-    "name": "Prompt Engineering",
-    "proficiency": 80,
-    "is_featured": false,
-    "order": 2
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 20,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.506Z",
-    "updated_at": "2026-09-05T17:49:41.506Z",
-    "category": 4,
-    "name": "Hugging Face",
-    "proficiency": 80,
-    "is_featured": false,
-    "order": 3
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 21,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.506Z",
-    "updated_at": "2026-09-05T17:49:41.506Z",
-    "category": 4,
-    "name": "Tokenization",
-    "proficiency": 80,
-    "is_featured": false,
-    "order": 4
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 22,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.507Z",
-    "updated_at": "2026-09-05T17:49:41.507Z",
-    "category": 4,
-    "name": "Embeddings",
-    "proficiency": 80,
-    "is_featured": false,
-    "order": 5
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 23,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.507Z",
-    "updated_at": "2026-09-05T17:49:41.507Z",
-    "category": 4,
-    "name": "N-gram Models",
-    "proficiency": 80,
-    "is_featured": false,
-    "order": 6
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 24,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.507Z",
-    "updated_at": "2026-09-05T17:49:41.507Z",
-    "category": 4,
-    "name": "HMM",
-    "proficiency": 80,
-    "is_featured": false,
-    "order": 7
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 25,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.508Z",
-    "updated_at": "2026-09-05T17:49:41.508Z",
-    "category": 5,
-    "name": "Exploratory Data Analysis",
-    "proficiency": 88,
-    "is_featured": true,
-    "order": 0
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 26,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.508Z",
-    "updated_at": "2026-09-05T17:49:41.508Z",
-    "category": 5,
-    "name": "Data Cleaning",
-    "proficiency": 80,
-    "is_featured": false,
-    "order": 1
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 27,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.509Z",
-    "updated_at": "2026-09-05T17:49:41.509Z",
-    "category": 5,
-    "name": "Data Visualization",
-    "proficiency": 80,
-    "is_featured": false,
-    "order": 2
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 28,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.509Z",
-    "updated_at": "2026-09-05T17:49:41.509Z",
-    "category": 5,
-    "name": "Pandas",
-    "proficiency": 80,
-    "is_featured": false,
-    "order": 3
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 29,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.509Z",
-    "updated_at": "2026-09-05T17:49:41.509Z",
-    "category": 5,
-    "name": "NumPy",
-    "proficiency": 80,
-    "is_featured": false,
-    "order": 4
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 30,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.510Z",
-    "updated_at": "2026-09-05T17:49:41.510Z",
-    "category": 6,
-    "name": "Single & Multi-Step Forecasting",
-    "proficiency": 90,
-    "is_featured": true,
-    "order": 0
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 31,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.510Z",
-    "updated_at": "2026-09-05T17:49:41.510Z",
-    "category": 6,
-    "name": "Lag Features",
-    "proficiency": 80,
-    "is_featured": false,
-    "order": 1
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 32,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.510Z",
-    "updated_at": "2026-09-05T17:49:41.510Z",
-    "category": 6,
-    "name": "Statistical Analysis",
-    "proficiency": 80,
-    "is_featured": false,
-    "order": 2
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 33,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.511Z",
-    "updated_at": "2026-09-05T17:49:41.511Z",
-    "category": 6,
-    "name": "Leakage-safe Evaluation",
-    "proficiency": 80,
-    "is_featured": false,
-    "order": 3
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 34,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.512Z",
-    "updated_at": "2026-09-05T17:49:41.512Z",
-    "category": 7,
-    "name": "Django",
-    "proficiency": 88,
-    "is_featured": true,
-    "order": 0
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 35,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.512Z",
-    "updated_at": "2026-09-05T17:49:41.512Z",
-    "category": 7,
-    "name": "HTML / CSS",
-    "proficiency": 90,
-    "is_featured": true,
-    "order": 1
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 36,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.512Z",
-    "updated_at": "2026-09-05T17:49:41.512Z",
-    "category": 7,
-    "name": "JavaScript",
-    "proficiency": 82,
-    "is_featured": true,
-    "order": 2
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 37,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.512Z",
-    "updated_at": "2026-09-05T17:49:41.512Z",
-    "category": 7,
-    "name": "Bootstrap",
-    "proficiency": 80,
-    "is_featured": false,
-    "order": 3
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 38,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.513Z",
-    "updated_at": "2026-09-05T17:49:41.513Z",
-    "category": 7,
-    "name": "Flask",
-    "proficiency": 80,
-    "is_featured": false,
-    "order": 4
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 39,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.513Z",
-    "updated_at": "2026-09-05T17:49:41.513Z",
-    "category": 7,
-    "name": "Streamlit",
-    "proficiency": 80,
-    "is_featured": false,
-    "order": 5
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 40,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.513Z",
-    "updated_at": "2026-09-05T17:49:41.513Z",
-    "category": 8,
-    "name": "Data Structures & Algorithms",
-    "proficiency": 90,
-    "is_featured": true,
-    "order": 0
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 41,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.514Z",
-    "updated_at": "2026-09-05T17:49:41.514Z",
-    "category": 8,
-    "name": "OOP",
-    "proficiency": 80,
-    "is_featured": false,
-    "order": 1
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 42,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.514Z",
-    "updated_at": "2026-09-05T17:49:41.514Z",
-    "category": 8,
-    "name": "DBMS",
-    "proficiency": 80,
-    "is_featured": false,
-    "order": 2
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 43,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.514Z",
-    "updated_at": "2026-09-05T17:49:41.514Z",
-    "category": 8,
-    "name": "Operating Systems",
-    "proficiency": 80,
-    "is_featured": false,
-    "order": 3
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 44,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.514Z",
-    "updated_at": "2026-09-05T17:49:41.514Z",
-    "category": 8,
-    "name": "Computer Networks",
-    "proficiency": 80,
-    "is_featured": false,
-    "order": 4
-  }
-},
-{
-  "model": "core.skill",
-  "pk": 45,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.515Z",
-    "updated_at": "2026-09-05T17:49:41.515Z",
-    "category": 8,
-    "name": "Git / GitHub",
-    "proficiency": 80,
-    "is_featured": false,
-    "order": 5
-  }
-},
-{
-  "model": "core.education",
-  "pk": 1,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.515Z",
-    "updated_at": "2026-09-05T17:49:41.515Z",
-    "institution": "Atal Bihari Vajpayee Indian Institute of Information Technology and Management",
-    "degree": "M.Tech",
-    "field_of_study": "Information Technology",
-    "location": "Gwalior, MP",
-    "start_year": 2025,
-    "end_year": null,
-    "score": "Aggregate: 100%",
-    "order": 1
-  }
-},
-{
-  "model": "core.education",
-  "pk": 2,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.516Z",
-    "updated_at": "2026-09-05T17:49:41.516Z",
-    "institution": "Rajiv Gandhi University of Knowledge Technologies",
-    "degree": "B.Tech",
-    "field_of_study": "Computer Science and Engineering",
-    "location": "Srikakulam, AP",
-    "start_year": 2021,
-    "end_year": 2025,
-    "score": "Aggregate: 89.7%",
-    "order": 2
-  }
-},
-{
-  "model": "core.education",
-  "pk": 3,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.516Z",
-    "updated_at": "2026-09-05T17:49:41.516Z",
-    "institution": "Rajiv Gandhi University of Knowledge Technologies",
-    "degree": "Intermediate",
-    "field_of_study": "Maths, Physics and Chemistry",
-    "location": "Srikakulam, AP",
-    "start_year": 2019,
-    "end_year": 2021,
-    "score": "Aggregate: 98.3%",
-    "order": 3
-  }
-},
-{
-  "model": "core.education",
-  "pk": 4,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.516Z",
-    "updated_at": "2026-09-05T17:49:41.516Z",
-    "institution": "A.P Model School, Ganguvari Sigadam",
-    "degree": "SSC",
-    "field_of_study": "",
-    "location": "Andhra Pradesh",
-    "start_year": 2018,
-    "end_year": 2019,
-    "score": "Aggregate: 100%",
-    "order": 4
-  }
-},
-{
-  "model": "core.experience",
-  "pk": 1,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.516Z",
-    "updated_at": "2026-09-05T17:49:41.516Z",
-    "role": "Data Science Intern",
-    "organisation": "Andhra Pradesh State Skill Development Corporation (APSSDC)",
-    "location": "Andhra Pradesh, India",
-    "start_date": "2024-05-01",
-    "end_date": "2024-06-30",
-    "summary": "Built and shipped an end-to-end sentiment analysis pipeline over real customer feedback data.",
-    "tech_stack": "Python, Machine Learning, NLP, Scikit-learn, Pandas, NLTK",
-    "order": 1
-  }
-},
-{
-  "model": "core.experiencebullet",
-  "pk": 1,
-  "fields": {
-    "experience": 1,
-    "text": "Developed an NLP-based sentiment analysis model achieving 88% accuracy.",
-    "order": 0
-  }
-},
-{
-  "model": "core.experiencebullet",
-  "pk": 2,
-  "fields": {
-    "experience": 1,
-    "text": "Processed and analyzed 5,000+ records using data cleaning, preprocessing and feature engineering.",
-    "order": 1
-  }
-},
-{
-  "model": "core.experiencebullet",
-  "pk": 3,
-  "fields": {
-    "experience": 1,
-    "text": "Improved data quality by 30% through effective preprocessing and validation techniques.",
-    "order": 2
-  }
-},
-{
-  "model": "core.experiencebullet",
-  "pk": 4,
-  "fields": {
-    "experience": 1,
-    "text": "Optimized the inference pipeline, reducing prediction time by 20%.",
-    "order": 3
-  }
-},
-{
-  "model": "core.project",
-  "pk": 1,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.517Z",
-    "updated_at": "2026-09-05T17:49:41.517Z",
-    "title": "Large-Scale Benchmarking Pipeline for Photovoltaic Power Forecasting",
-    "slug": "large-scale-benchmarking-pipeline-for-photovoltaic-power-forecasting",
-    "subtitle": "21 models · 4 sites · 7 horizons · 4,928 evaluations",
-    "category": "dl",
-    "short_description": "A reproducible benchmark of 21 forecasting models for solar power across 4 sites, 7 horizons and 2 temporal resolutions — plus an audit that overturned the study's original conclusion.",
-    "description": "Implemented Informer, Autoformer, FEDformer and the Temporal Fusion Transformer directly from their source papers, alongside statistical and gradient-boosted baselines, and evaluated every combination of site, horizon and resolution.\nAudited the existing forecasting pipeline and fixed 13 defects. The critical one returned single-step forecasts under multi-step labels, which made statistical models look better than deep learning at long horizons; correcting it reversed the finding entirely.\nRebuilt evaluation on leakage-safe foundations: chronological splits, train/test embargoes, and scaling fitted only on the training block.",
-    "highlights": "4,928 model evaluations across 21 architectures\nReimplemented 4 transformer forecasters from their papers\nFound and fixed 13 pipeline defects, one of which inverted the conclusion\nLeakage-safe chronological splits with train/test embargoes",
-    "tech_stack": "Python, PyTorch, TensorFlow, Transformers, XGBoost, pandas, NumPy",
-    "image": "",
-    "github_url": "",
-    "live_url": "",
-    "badge": "M.Tech Thesis",
-    "is_featured": true,
-    "order": 1
-  }
-},
-{
-  "model": "core.project",
-  "pk": 2,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.518Z",
-    "updated_at": "2026-09-05T17:49:41.518Z",
-    "title": "Retrieval-Augmented Narrative Consistency Verification",
-    "slug": "retrieval-augmented-narrative-consistency-verification",
-    "subtitle": "A 10.7M-parameter Transformer trained from scratch",
-    "category": "nlp",
-    "short_description": "Designed and trained a BERT-style Transformer with a hybrid BM25 + semantic retrieval RAG pipeline to verify whether narrative statements stay consistent with their source text.",
-    "description": "Rather than fine-tuning an off-the-shelf checkpoint, the encoder was designed and trained from scratch at 10.7M parameters so every architectural choice could be ablated.\nRetrieval combines lexical BM25 with dense semantic search, so the model sees evidence that keyword search alone would miss and vice versa.",
-    "highlights": "97.56% accuracy on the verification task\n0.97 Macro F1 and 0.99 ROC-AUC\nHybrid BM25 + dense retrieval for evidence selection\n10.7M-parameter encoder trained from scratch",
-    "tech_stack": "PyTorch, Transformers, RAG, BM25, NLP, Python",
-    "image": "",
-    "github_url": "",
-    "live_url": "",
-    "badge": "Research",
-    "is_featured": true,
-    "order": 2
-  }
-},
-{
-  "model": "core.project",
-  "pk": 3,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.518Z",
-    "updated_at": "2026-09-05T17:49:41.518Z",
-    "title": "AI-Powered Multimodal E-commerce Price Prediction System",
-    "slug": "ai-powered-multimodal-e-commerce-price-prediction-system",
-    "subtitle": "Text + image features feeding a stacked ensemble",
-    "category": "ml",
-    "short_description": "An end-to-end system predicting e-commerce product prices from both product descriptions and product images, served through a Streamlit app for real-time predictions.",
-    "description": "Textual features cover keywords, quality indicators and numeric analysis of the listing copy; deep image features come from pre-trained MobileNetV2 and ResNet50 backbones.\nPredictions come from a super ensemble of XGBoost, LightGBM, Random Forest, Gradient Boosting and Ridge Regression, with automated reporting built into the Streamlit interface.",
-    "highlights": "Multimodal features from product text and images\nMobileNetV2 and ResNet50 used as frozen feature extractors\nFive-model stacked ensemble for the final prediction\nStreamlit app for real-time pricing and automated reports",
-    "tech_stack": "Python, TensorFlow, Scikit-learn, XGBoost, LightGBM, Streamlit, NLP",
-    "image": "",
-    "github_url": "",
-    "live_url": "",
-    "badge": "End-to-end",
-    "is_featured": true,
-    "order": 3
-  }
-},
-{
-  "model": "core.project",
-  "pk": 4,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.519Z",
-    "updated_at": "2026-09-05T17:49:41.519Z",
-    "title": "COIN — Currency Operating Interface Navigation",
-    "slug": "coin-currency-operating-interface-navigation",
-    "subtitle": "Blockchain-backed group payments with a voice assistant",
-    "category": "web",
-    "short_description": "A digital payments application built on customised blockchain technology, supporting group transactions and an integrated voice assistant. Finalist at the Hitachi 30 Hacks hackathon.",
-    "description": "COIN reimagines everyday payments around groups rather than individuals: splitting, settling and tracking shared expenses are first-class operations rather than afterthoughts.\nA voice assistant layer lets users initiate and confirm transactions hands-free, and the customised blockchain layer keeps a verifiable ledger of group activity.",
-    "highlights": "Finalist at the Hitachi 30 Hacks Hackathon, Delhi 2024\nGroup transaction flows built on a customised blockchain\nIntegrated voice assistant for hands-free payments\nFull-stack build across frontend, backend and ledger",
-    "tech_stack": "Full Stack Web, Blockchain, JavaScript, Python, HTML, CSS",
-    "image": "",
-    "github_url": "",
-    "live_url": "",
-    "badge": "Hackathon Finalist",
-    "is_featured": false,
-    "order": 4
-  }
-},
-{
-  "model": "core.achievement",
-  "pk": 1,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.519Z",
-    "updated_at": "2026-09-05T17:49:41.519Z",
-    "kind": "award",
-    "title": "Joint Secretary, SGC Coding Club",
-    "issuer": "RGUKT Srikakulam",
-    "period": "2022 – 2024",
-    "description": "Conducted tests on HackerRank to sharpen students' coding skills.\nOrganised coding events and workshops that grew participation.\nBuilt a competitive programming culture on campus.",
-    "url": "",
-    "icon": "bi-people",
-    "order": 1
-  }
-},
-{
-  "model": "core.achievement",
-  "pk": 2,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.520Z",
-    "updated_at": "2026-09-05T17:49:41.520Z",
-    "kind": "award",
-    "title": "Finalist — HITACHI 30 Hacks Hackathon",
-    "issuer": "Hitachi Group",
-    "period": "2023 – 2024",
-    "description": "Reached the finals with COIN, a blockchain-based digital payments app.\nRecognised for group transactions and voice-assistant innovation.",
-    "url": "",
-    "icon": "bi-trophy",
-    "order": 2
-  }
-},
-{
-  "model": "core.achievement",
-  "pk": 3,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.520Z",
-    "updated_at": "2026-09-05T17:49:41.520Z",
-    "kind": "award",
-    "title": "Event Organizer, College Tech Fest",
-    "issuer": "RGUKT Srikakulam",
-    "period": "2023 – 2024",
-    "description": "Managed logistics and scheduling for technical events.\nCollaborated with faculty and students on sessions and showcases.",
-    "url": "",
-    "icon": "bi-calendar-event",
-    "order": 3
-  }
-},
-{
-  "model": "core.achievement",
-  "pk": 4,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.520Z",
-    "updated_at": "2026-09-05T17:49:41.520Z",
-    "kind": "award",
-    "title": "Qualified GATE 2025",
-    "issuer": "IIT / GATE",
-    "period": "2025",
-    "description": "Qualified GATE 2025, demonstrating command of core engineering subjects.",
-    "url": "",
-    "icon": "bi-patch-check",
-    "order": 4
-  }
-},
-{
-  "model": "core.achievement",
-  "pk": 5,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.520Z",
-    "updated_at": "2026-09-05T17:49:41.520Z",
-    "kind": "cert",
-    "title": "First Place — Code-O-Fiesta, Teckzite 2022",
-    "issuer": "RGUKT Nuzvid",
-    "period": "2022 – 2023",
-    "description": "",
-    "url": "",
-    "icon": "bi-award",
-    "order": 1
-  }
-},
-{
-  "model": "core.achievement",
-  "pk": 6,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.521Z",
-    "updated_at": "2026-09-05T17:49:41.521Z",
-    "kind": "cert",
-    "title": "Hackathon Participation — COIN Project",
-    "issuer": "Hitachi Group, Delhi",
-    "period": "2023 – 2024",
-    "description": "",
-    "url": "",
-    "icon": "bi-patch-check",
-    "order": 2
-  }
-},
-{
-  "model": "core.codingprofile",
-  "pk": 1,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.521Z",
-    "updated_at": "2026-09-05T17:49:41.521Z",
-    "platform": "LeetCode",
-    "username": "Mouli2025008",
-    "url": "https://leetcode.com/u/Mouli2025008/",
-    "icon": "bi-code-square",
-    "stat_label": "",
-    "stat_value": "",
-    "order": 1
-  }
-},
-{
-  "model": "core.codingprofile",
-  "pk": 2,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.521Z",
-    "updated_at": "2026-09-05T17:49:41.521Z",
-    "platform": "GeeksforGeeks",
-    "username": "Mouligfg",
-    "url": "https://www.geeksforgeeks.org/user/Mouligfg/",
-    "icon": "bi-braces",
-    "stat_label": "",
-    "stat_value": "",
-    "order": 2
-  }
-},
-{
-  "model": "core.codingprofile",
-  "pk": 3,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.522Z",
-    "updated_at": "2026-09-06T06:37:12.337Z",
-    "platform": "HackerRank",
-    "username": "Moulihr",
-    "url": "https://www.hackerrank.com/profile/chandramoulikil1",
-    "icon": "bi-terminal",
-    "stat_label": "",
-    "stat_value": "",
-    "order": 3
-  }
-},
-{
-  "model": "core.language",
-  "pk": 1,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.522Z",
-    "updated_at": "2026-09-05T17:49:41.522Z",
-    "name": "English",
-    "level": "Fluent",
-    "order": 1
-  }
-},
-{
-  "model": "core.language",
-  "pk": 2,
-  "fields": {
-    "created_at": "2026-09-05T17:49:41.522Z",
-    "updated_at": "2026-09-05T17:49:41.522Z",
-    "name": "Telugu",
-    "level": "Fluent",
-    "order": 2
-  }
-},
-{
-  "model": "blog.category",
-  "pk": 1,
-  "fields": {
-    "name": "Machine Learning",
-    "slug": "machine-learning"
-  }
-},
-{
-  "model": "blog.category",
-  "pk": 2,
-  "fields": {
-    "name": "Web Development",
-    "slug": "web-development"
-  }
-},
-{
-  "model": "blog.post",
-  "pk": 1,
-  "fields": {
-    "title": "The bug that reversed my thesis conclusion",
-    "slug": "the-bug-that-reversed-my-thesis-conclusion",
-    "category": 1,
-    "excerpt": "For weeks the statistical baselines beat every deep learning model at long horizons. The models were fine. The evaluation was not.",
-    "body": "Every benchmark I ran told the same story: at long forecast horizons, humble statistical models outperformed Informer, Autoformer and FEDformer. It was a clean, publishable, counterintuitive result — the kind you should distrust.\n\nThe pipeline was returning single-step forecasts while labelling them as multi-step. A one-step-ahead prediction is a far easier problem than a 24-step-ahead one, so the baselines were being scored on an easy task while the deep models were doing the hard one. Correcting the alignment reversed the ranking completely.\n\nThat was one of thirteen defects I found while auditing the pipeline. The lesson was not about transformers at all: a result that flatters your baselines deserves the same scrutiny as one that flatters your novel method. Now every pipeline I build gets chronological splits, train/test embargoes, and scaling fitted on the training block only — before I look at a single metric.",
-    "cover_image": "",
-    "tags": "forecasting, debugging, evaluation, transformers",
-    "reading_minutes": 1,
-    "status": "published",
-    "published_at": "2026-08-24T17:49:41.523Z",
-    "views": 0,
-    "created_at": "2026-09-05T17:49:41.524Z",
-    "updated_at": "2026-09-05T17:49:41.524Z"
-  }
-},
-{
-  "model": "blog.post",
-  "pk": 2,
-  "fields": {
-    "title": "Why I trained a 10.7M-parameter Transformer from scratch",
-    "slug": "why-i-trained-a-107m-parameter-transformer-from-scratch",
-    "category": 1,
-    "excerpt": "Fine-tuning a checkpoint would have been faster. Building the encoder myself is what actually taught me how attention behaves.",
-    "body": "The obvious move for narrative consistency verification is to fine-tune a pre-trained BERT. I built a 10.7M-parameter encoder from scratch instead, and I'd make the same call again.\n\nAt that scale every architectural decision is observable. Change the head count, the layer depth or the positional scheme, and you see the effect in hours, not days. Ablations stop being a formality and become the way you actually understand the model.\n\nThe retrieval side mattered just as much. Pairing lexical BM25 with dense semantic search surfaced evidence that neither method found alone — exact-name matches that embeddings blurred, and paraphrases that keywords missed entirely. The final system reached 97.56% accuracy with a 0.99 ROC-AUC, but the retrieval quality moved that number more than any modelling change did.",
-    "cover_image": "",
-    "tags": "transformers, RAG, NLP, PyTorch",
-    "reading_minutes": 1,
-    "status": "published",
-    "published_at": "2026-08-06T17:49:41.523Z",
-    "views": 0,
-    "created_at": "2026-09-05T17:49:41.524Z",
-    "updated_at": "2026-09-05T17:49:41.524Z"
-  }
-},
-{
-  "model": "blog.post",
-  "pk": 3,
-  "fields": {
-    "title": "Building this portfolio with Django instead of static HTML",
-    "slug": "building-this-portfolio-with-django-instead-of-static-html",
-    "category": 2,
-    "excerpt": "Hardcoding a portfolio in HTML is faster on day one and painful on day sixty. Here's what the database bought me.",
-    "body": "This site could have been one long index.html. Instead every section — projects, skills, education, achievements, blog posts — is a Django model, edited through the admin.\n\nThe practical payoff is that adding a project takes a form submission, not a deploy. Filtering, search and pagination come nearly free from the ORM. The contact form saves to the database and shows unread messages in the admin, so nothing depends on an SMTP server being configured correctly.\n\nThe interview payoff is bigger. 'I built my own portfolio CMS' invites questions about models, migrations, query optimisation and the admin — all things I can talk about at length because I made the decisions. A static page invites no questions at all.",
-    "cover_image": "",
-    "tags": "django, bootstrap, python, web",
-    "reading_minutes": 1,
-    "status": "published",
-    "published_at": "2026-09-02T17:49:41.523Z",
-    "views": 0,
-    "created_at": "2026-09-05T17:49:41.524Z",
-    "updated_at": "2026-09-05T17:49:41.524Z"
-  }
-}
 ]

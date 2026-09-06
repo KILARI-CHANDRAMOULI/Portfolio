@@ -87,11 +87,16 @@ def resume_download(request):
     """Serve the resume from the Profile record, falling back to a static copy."""
     profile = Profile.objects.filter(is_active=True).first()
     if profile and profile.resume:
-        return FileResponse(
-            profile.resume.open("rb"),
-            as_attachment=True,
-            filename=Path(profile.resume.name).name,
-        )
+        # The uploaded file may be missing on ephemeral hosts (media/ is not
+        # deployed), so fall through to the static copy instead of erroring.
+        try:
+            return FileResponse(
+                profile.resume.open("rb"),
+                as_attachment=True,
+                filename=Path(profile.resume.name).name,
+            )
+        except (FileNotFoundError, OSError):
+            pass
 
     fallback = Path(settings.BASE_DIR) / "static" / "files" / "resume.pdf"
     if fallback.exists():
